@@ -1,9 +1,3 @@
-#
-#
-#注意机型 TNAME: K2P或者 RM2100 等等
-#
-#
-#修改TNAME: K2P 中的K2P为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
 name: Build Padavan
 
 on: 
@@ -79,12 +73,12 @@ jobs:
         ##广告管理##
         #echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=n" >> .config #adbyby plus+
         #echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=n" >> .config #adg DNS去AD
-        echo "CONFIG_FIRMWARE_CPU_1000MHZ=n" >> .config
+        echo "CONFIG_FIRMWARE_CPU_1000MHZ=y" >> .config
         ##内网穿透服务##
-        echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier ~1.3M
-        echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config #aliddns
-        echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD=y" >> .config #wirguard
-        echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config #smartdns
+        echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=n" >> .config #zerotier ~1.3M
+        echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> .config #aliddns
+        echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD=n" >> .config #wirguard
+        echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=n" >> .config #smartdns
         echo "CONFIG_FIRMWARE_INCLUDE_TTYD=y" >> .config #ttyd
         #echo "CONFIG_FIRMWARE_INCLUDE_NFSD=y" >> .config #iperf3
         #echo "CONFIG_FIRMWARE_INCLUDE_NFSC=y" >> .config #socat
