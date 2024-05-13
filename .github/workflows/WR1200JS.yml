@@ -1,17 +1,8 @@
 name: Build Padavan
 
-on: 
-  release:
-    types: [published]
-  push:
-    tags:
-    - 'v*'
-  #  branches: 
-  #    - master
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
-    types: [started]
+on:
+  - pull_request
+  - push
 
 jobs:
   build:
